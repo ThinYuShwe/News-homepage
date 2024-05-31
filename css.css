@@ -1,0 +1,313 @@
+header,
+body,
+main,
+section,
+article,
+div,
+picture,
+source,
+img,
+p,
+h2,
+h1,
+button {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 1px solid red; */
+}
+
+:root {
+  --offWhite: hsl(36, 100%, 99%);
+  --grayishBlue: hsl(233, 8%, 79%);
+  --darkGrayishBlue: hsl(236, 13%, 42%);
+  --veryDarkBlue: hsl(240, 100%, 5%);
+  --softOrange: hsl(35, 77%, 62%);
+  --softRed: hsl(5, 85%, 63%);
+}
+
+img {
+  width: 100%;
+}
+
+body {
+  padding: 1rem;
+  padding-top: 0;
+  font-family: "Inter", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background-color: var(--offWhite);
+  /* max-width: 22rem; */
+}
+
+.head {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  position: relative;
+}
+
+.logo {
+  width: 3rem;
+}
+
+.menuIcon {
+  width: 2rem;
+  cursor: pointer;
+}
+
+.desktop {
+  display: none;
+}
+
+.menuMobile {
+  background-color: rgb(255, 255, 255);
+  width: 68%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  color: var(--darkGrayishBlue);
+  display: none;
+}
+
+.menuMobile ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1.7rem;
+  list-style: none;
+  font-size: 1.4rem;
+  margin: 100px 0px 0px 0px;
+  cursor: pointer;
+}
+
+.cross-x {
+  font-size: 3rem;
+  font-weight: lighter;
+  position: relative;
+  left: 80%;
+  cursor: pointer;
+}
+
+.menuDesktop ul {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  color: var(--darkGrayishBlue);
+  gap: 2.3rem;
+  cursor: pointer;
+  list-style-type: none;
+  color: var(--veryDarkBlue);
+  gap: 2.5rem;
+  cursor: pointer;
+}
+
+.menuDesktop ul li:hover {
+  color: var(--softRed);
+}
+
+.menuDesktop {
+  display: none;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.3rem;
+}
+
+.main-title {
+  font-size: 2rem;
+  font-weight: bolder;
+}
+
+.main p {
+  color: var(--darkGrayishBlue);
+  display: flex;
+  flex-direction: column;
+}
+
+.main button {
+  background-color: var(--softRed);
+  border: none;
+  width: 7rem;
+  padding: 0.5rem;
+  font-weight: bolder;
+  text-transform: uppercase;
+  line-height: 1.3rem;
+  letter-spacing: 0.1rem;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.main button:hover {
+  background-color: black;
+  color: white;
+}
+
+aside {
+  background-color: var(--veryDarkBlue);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.1rem;
+}
+
+aside h2 {
+  color: var(--softOrange);
+}
+
+aside article {
+  border-bottom: var(--offWhite);
+}
+
+aside article p {
+  color: rgba(245, 245, 245, 0.932);
+}
+
+hr {
+  width: 100%;
+}
+
+.articles-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.articles-section article {
+  display: flex;
+  flex-direction: row;
+  gap: 1.2rem;
+}
+
+.articles-section article div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.articles-section article div img {
+  width: 6rem;
+}
+
+.articles-section article div h1 {
+  font-size: 1.4rem;
+  font-weight: bolder;
+  color: var(--softRed);
+}
+
+.articles-section article div h2 {
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.articles-section article div h2:hover {
+  color: var(--softRed);
+}
+
+.articles-section article div p {
+  font-size: 0.9rem;
+}
+
+@media screen and (min-width: 75rem) {
+  main {
+    width: 100%;
+    padding: 4rem;
+  }
+
+  .intro {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .intro article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    /* width: 33rem; */
+    gap: 2rem;
+  }
+
+  .main > * {
+    flex: 1;
+  }
+
+  .main-title {
+    font-size: 4rem;
+  }
+
+  .main p {
+    font-size: 1.15rem;
+    line-height: 1.9rem;
+  }
+
+  .main button {
+    width: 12rem;
+    padding: 1rem;
+    font-size: 1.1rem;
+    font-weight: bolder;
+  }
+
+  aside {
+    width: 90%;
+    justify-content: center;
+  }
+
+  aside h2 {
+    font-size: 3rem;
+  }
+
+  .desktop {
+    display: block;
+  }
+
+  .mobile {
+    display: none;
+  }
+
+  .articles-section {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .articles-section article div img {
+    width: 8.8rem;
+  }
+
+  .articles-section article div h1 {
+    font-size: 2.3rem;
+  }
+
+  .menuIcon {
+    display: none;
+  }
+
+  .menuMobile {
+    display: none;
+  }
+
+  .menuDesktop {
+    display: block;
+  }
+}
